@@ -1,0 +1,963 @@
+/*
+This is the style css for the homepage using sass as a pre processor.
+*/
+
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+
+//Custom grid
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF TWO  */
+.span_2_of_2 {
+  width: 100%;
+}
+.span_1_of_2 {
+  width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .span_2_of_2, .span_1_of_2 { width: 100%; }
+}
+
+/*  GRID OF THREE  */
+.span_3_of_3 { width: 100%; }
+.span_2_of_3 { width: 66.13%; }
+.span_1_of_3 { width: 32.26%; }
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {  margin: 1% 0 1% 0%; }
+  .span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
+
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+  width: 100%;
+}
+.span_3_of_4 {
+  width: 74.6%;
+}
+.span_2_of_4 {
+  width: 49.2%;
+}
+.span_1_of_4 {
+  width: 23.8%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {  margin: 1% 0 1% 0%; }
+  .span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }
+}
+
+// Variables goes here
+$fontStack:  'PT Sans', sans-serif;
+$primaryColor: #f45a40;
+$fontColor1: #ffffff;
+$greyColor: #67686d;
+$backgroundColor: #ffffff;
+$font-size-28: 28px;
+$font-size-23: 23px;
+$font-size-18: 18px;
+$font-size-14: 14px;
+$font-size-12: 12px;
+// Variables ends here ->
+
+// Mixin's starts here
+@mixin overall-sizes-80($width: 80%, $margin: 0 auto) {
+  width: $width;
+  margin: $margin;
+}
+@mixin overall-sizes-100($width: 100%, $margin: 0 auto) {
+  width: $width;
+  margin: $margin;
+}
+@mixin products-border($border: 1px solid, $color: $greyColor) {
+  border: $border;
+  color: $color;
+}
+@mixin product-btn($width: 100%, $color: $fontColor1, $background: $primaryColor, $font-size: $font-size-14) {
+  width: $width;
+  color: $color;
+  background-color: $background;
+  font-size: $font-size;
+}
+
+// Mixin's ends here ->
+
+// General styling starts here
+body {
+  background-color: $backgroundColor;
+  width: 100%;
+  margin: auto;
+  height: auto;
+}
+// General styling ends here ->
+
+// Header starts here
+#header {
+  @include overall-sizes-80();
+  height: 135px;
+  background-color: $backgroundColor;
+}
+#header {
+  .logo {
+    width: 100%;
+    align-self: center;
+    a{
+
+      font-family: $fontStack;
+      color: $primaryColor;
+      font-size: $font-size-23;
+      text-decoration: none;
+    }
+  }
+  .logo-and-info {
+    width: 100%;
+    height: 84px;
+    border-bottom: 1px solid $greyColor;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .logo-and-info {
+    span {
+      width: 15%;
+      font-family: 'Arial', sans-serif;
+      font-size: $font-size-14;
+      padding: 0 20px 0px 20px;
+      color: $greyColor;
+    }
+    .cart {
+      background: #ededed;
+      &:hover {
+        color: darken($greyColor, 20%);
+        text-decoration: underline;
+      }
+    }
+  }
+  .nav-bar {
+    background-color: $backgroundColor;
+  }
+}
+.nav-bar {
+  nav {
+    ul li ul.dropdown {
+      border-radius: 1px;
+      width: 8%;
+      height: auto;
+      background: $greyColor;
+      display: none;
+      position: absolute;
+      z-index: 999;
+    }
+    ul li ul.dropdown a {
+      margin-left: 5px;
+      color: $fontColor1;
+      text-decoration: none;
+      &:hover {
+        color: lighten($primaryColor, 10%);
+        text-decoration: underline;
+      }
+    }
+    ul li:hover ul.dropdown {
+      display: block;
+    }
+    ul li ul.dropdown li {
+      display: block;
+    }
+    a {
+      font-family: $fontStack;
+      text-decoration: none;
+      transition: all .3s ease;
+      &:hover {
+        color: darken($primaryColor, 20%);
+        text-decoration: underline;
+      };
+      &:active {
+        color: lighten($primaryColor, 0%);
+      }
+    }
+    ul {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+      -webkit-margin-start: 0;
+      -webkit-margin-end: 0;
+      -webkit-padding-start: 0;
+      .search {
+        color: $greyColor;
+      }
+    }
+    li {
+      align-items: center;
+      font-size: $font-size-18;
+      a {
+        color: $greyColor;
+      }
+    }
+    .search {
+      width: 35%;
+      display: flex;
+      justify-content: flex-end;
+      align-self: center;
+    }
+  }
+}
+.show-menu {
+  font-family: $fontStack;
+  text-decoration: none;
+  color: $fontColor1;
+  background: $primaryColor;
+  text-align: center;
+  padding: 10px 0;
+  display: none;
+}
+  input[type=checkbox]{
+    display: none;
+  }
+  input[type=checkbox]:checked ~ #menu{
+    display: block;
+  }
+@media screen and (max-width : 768px){
+  #header {
+    margin-bottom: 130px;
+    .logo {
+      text-align: center;
+      font-size: $font-size-12;
+    }
+    .logo-and-info {
+      span {
+        display: none;
+      }
+    }
+  }
+  .nav-bar{
+    nav {
+      ul {
+        display: flex;
+        flex-direction: column;
+        li {
+          width:100%;
+        }
+        position: static;
+        .search {
+          display: none;
+        }
+      }
+      li {
+        text-align: center;
+        width: 100%;
+        background: $primaryColor;
+        &:hover {
+          background: darken($primaryColor, 10%);
+          text-decoration: underline;
+        }
+        a {
+          color: $fontColor1;
+        }
+      }
+    }
+  }
+
+}
+// Header ends here ->
+
+// Homepage content starts here
+#homepage {
+  @include overall-sizes-100();
+  height: auto;
+}
+#homepage {
+  .slider {
+    ul {
+      list-style: none;
+      li {
+        img {
+          height: 700px;
+          width: 100%;
+        }
+      }
+    }
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: 8px solid $primaryColor;
+  .transparent-box {
+    width: 50%;
+    background-color: #2a2d34;
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+    .transparent-box-content {
+      margin-left: 10%;
+      position: absolute;
+      color: $fontColor1;
+      z-index: 110;
+      h1 {
+        font-family: $fontStack;
+      }
+      p {
+        font-family: $fontStack;
+      }
+      .shop-brasil-button {
+        width: 150px;
+        height: 40px;
+        background: $primaryColor;
+        color: $fontColor1;
+        font-size: $font-size-14;
+        font-family: 'Arial', sans-serif;
+        border: 0;
+        &:hover {
+          background: darken($primaryColor, 20%);
+          box-shadow: 1px 1px 1px $greyColor;
+        };
+      }
+    }
+  }
+  .products {
+    @include overall-sizes-80();
+    background-color: $backgroundColor;
+  }
+}
+#homepage {
+  .top-divider {
+    position: absolute;
+    border-top: 3px solid $primaryColor;
+    width: 100%;
+    z-index: 100;
+    margin-top: 10px;
+  }
+  .categories {
+    @include overall-sizes-80();
+    height: 500px;
+    background-color: $backgroundColor;
+  }
+  .categories img {
+    width: 100%;
+    height: 250px;
+  }
+    .categories h2 {
+    font-family: $fontStack;
+    font-size: $font-size-23;
+    color: $primaryColor;
+  }
+  .categories p {
+    font-family: 'Arial', sans-serif;
+    font-size: $font-size-14;
+  }
+  .category-2 h2 {
+    font-size: $font-size-23;
+    text-decoration: underline;
+  }
+  .popular-products-title h2 {
+    font-family: $fontStack;
+    font-size: $font-size-23;
+    text-align: center;
+    color: $greyColor;
+  }
+  .popular-products {
+    display: flex;
+    background-color: $backgroundColor;
+  }
+  .product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 0.1px solid $greyColor;
+  }
+  .product-image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-bottom: 0.1px solid $greyColor;
+  }
+  .product-image {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  .product-image-middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  .product-image-container:hover .product-image {
+    opacity: 0.3;
+  }
+  .product-image-container:hover .product-image-middle {
+    opacity: 1;
+  }
+  .product-image-text {
+    color: $primaryColor;
+    font-size: $font-size-14;
+    a {
+      color: $primaryColor;
+      font-size: $font-size-14;
+      text-decoration: none;
+    }
+  }
+  .product {
+    @include products-border;
+    h4 {
+    font-size: $font-size-18;
+    font-family: $fontStack;
+    }
+    h6 {
+    font-size: $font-size-14;
+    font-family: $fontStack;
+    }
+    p {
+    font-size: $font-size-12;
+    font-family: $fontStack;
+    }
+    .price {
+    font-family: 'Arial', sans-serif;
+    }
+  }
+  .product {
+    .product-text-aligned {
+      margin: auto;
+      width: 83%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  .product {
+    .buy-now-btn {
+      @include product-btn;
+      height: 38px;
+      border: none;
+      font-family: 'Arial', sans-serif;
+    }
+    .buy-now-btn {
+      transition: .5s ease;
+      &:hover {
+        background: darken($primaryColor, 20%);
+        box-shadow: 1px 1px 1px $greyColor;
+      };
+    }
+    .prices-icons {
+      display: flex;
+      justify-content: space-around;
+    }
+    .prices-icons {
+      .price {
+        font-size: $font-size-14;
+        color: $primaryColor;
+        width: 60%;
+      }
+      .like-add-icons {
+        &:hover {
+          color: darken($greyColor, 20%);
+        }
+      }
+    }
+  }
+  .product  {
+    .horizontal-line {
+      width: 83%;
+    }
+  }
+}
+div.stars {
+  width: 270px;
+  display: inline-block;
+}
+
+input.star { display: none; }
+
+label.star {
+  float: right;
+  padding: 10px;
+  font-size: $font-size-14;
+  color: $primaryColor;
+  transition: all .2s;
+}
+
+input.star:checked ~ label.star:before {
+  content: '\f005';
+  color: #FD4;
+  transition: all .25s;
+}
+
+input.star-5:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked ~ label.star:before { color: #F62; }
+
+input.star-10:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-5:checked ~ label.star:before { color: #F62; }
+
+input.star-15:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-10:checked ~ label.star:before { color: #F62; }
+
+input.star-20:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-15:checked ~ label.star:before { color: #F62; }
+
+input.star-25:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-20:checked ~ label.star:before { color: #F62; }
+
+input.star-30:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-25:checked ~ label.star:before { color: #F62; }
+
+input.star-35:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-30:checked ~ label.star:before { color: #F62; }
+
+input.star-40:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-35:checked ~ label.star:before { color: #F62; }
+
+label.star:hover { transform: rotate(-15deg) scale(1.3); }
+
+label.star:before {
+  content: '\f006';
+  font-family: FontAwesome;
+}
+// Homepage ends here ->
+
+// Contact styles starts here
+#contact {
+  @include overall-sizes-80();
+  height: auto;
+  padding-bottom: 30px;
+  .contact-form {
+    h1 {
+      color: $greyColor;
+      font-family: $fontStack;
+      font-size: $font-size-28;
+    }
+    label {
+      color: $greyColor;
+    }
+  }
+  .contact-btn {
+    width: 150px;
+    height: 40px;
+    color: $fontColor1;
+    background: $primaryColor;
+    font-size: $font-size-12;
+    font-family: 'Arial', sans-serif;
+    transition: .5s ease;
+    &:hover {
+      background: darken($primaryColor, 20%);
+      box-shadow: 1px 1px 1px $greyColor;
+      border: 0;
+    };
+  }
+}
+// Contact styles ends here ->
+
+// Detail page styles starts here
+#detail-page {
+  @include overall-sizes-80();
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.detail-page-styles {
+  width: 100%;
+  height: auto;
+}
+.container-arrange {
+
+}
+.product-gallery {
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+#navigation {
+  display: flex;
+  list-style: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+  li {
+    padding: 5px;
+    margin: auto;
+    clear: both;
+  }
+  li a img {
+    display: block;
+    border: none;
+  }
+  li a {
+    padding: 50px;
+    border: 1px solid $greyColor;
+    display: block;
+    &:hover {
+      border: 1px solid $primaryColor;
+      box-shadow: 1px 1px 1px $greyColor;
+    };
+  }
+}
+#full-picture {
+  width: 100%;
+  height: 572px;
+  overflow: hidden;
+  border: 1px solid $greyColor;
+  img {
+    margin: auto;
+  }
+}
+.top-divider1 {
+  position: absolute;
+  border-top: 8px solid $primaryColor;
+  width: 100%;
+  z-index: 100;
+  margin-top: -10px;
+}
+.top-divider {
+  position: absolute;
+  border-top: 3px solid $primaryColor;
+  width: 100%;
+  z-index: 100;
+}
+.product-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .buy-now-btn {
+    width: 45%;
+    height: 50px;
+    align-self: flex-end;
+    font-size: $font-size-28;
+    font-family: 'Arial', sans-serif;
+    color: $fontColor1;
+    background: $primaryColor;
+    border: 0;
+    transition: .5s ease;
+    &:hover {
+      background: darken($primaryColor, 20%);
+      box-shadow: 1px 1px 1px $greyColor;
+    };
+  }
+  h1 {
+    align-self: flex-start;
+    color: $greyColor;
+    font-size: $font-size-28;
+    font-family: $fontStack;
+  }
+  .selects {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    .content-1 {
+      text-align: center;
+      height: 50px;
+      width: 65%;
+      &:hover {
+        color: $greyColor;
+        background: lighten($primaryColor, 20%);
+        box-shadow: 1px 1px 1px $greyColor;
+      };
+    }
+    .content-2 {
+      text-align: center;
+      height: 50px;
+      width: 30%;
+      &:hover {
+        color: $greyColor;
+        background: lighten($primaryColor, 20%);
+        box-shadow: 1px 1px 1px $greyColor;
+      };
+    }
+  }
+  .labels {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+  }
+  label {
+    color: $greyColor;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  select {
+    color: $greyColor;
+  }
+  .price-in-kr {
+    font-size: 40px;
+    font-family: $fontStack;
+    color: #000000;
+  }
+  .price-from {
+    font-size: 24px;
+    text-decoration: line-through;
+    color: $greyColor;
+  }
+  span {
+    align-self: flex-end;
+    font-size: 20px;
+    color: $greyColor;
+  }
+  img {
+    width: 100px;
+    align-self: flex-start;
+  }
+  .align-logo-price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.tabs {
+  @include overall-sizes-80();
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  height: auto;
+  overflow: hidden;
+  ul {
+    list-style-type: none;
+    border-bottom: 1px solid $greyColor;
+  }
+  a {
+    background: $backgroundColor;
+    padding: 15px;
+    font-size: $font-size-28;
+    color: $greyColor;
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+    border: 1px solid $greyColor;
+    border-radius: 5px $primaryColor;
+    &:hover {
+      text-decoration: overline;
+      color: $primaryColor;
+    }
+    &:active .active {
+      color: $primaryColor;
+      background-color: $greyColor;
+    }
+  }
+}
+// Detail page styles ends here ->
+
+
+// Newsletter starts here
+#newsletter-singup {
+  @include overall-sizes-100();
+  height: auto;
+  background-color: $primaryColor;
+}
+.newsletter-wrapper {
+  @include overall-sizes-80();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#newsletter-singup {
+  .newsletter {
+    color: $fontColor1;
+    font-size: $font-size-23;
+    h1 {
+      font-family: $fontStack;
+    }
+  }
+  .newsletter-register {
+    .sing-up-btn {
+      width: 25%;
+      height: 50px;
+      background: #ff674f;
+      color: $fontColor1;
+      font-size: $font-size-14;
+      font-family: 'Arial', sans-serif;
+      border: 0;
+      &:hover {
+        background: darken($primaryColor, 20%);
+        box-shadow: 1px 1px 1px $greyColor;
+      };
+    }
+  }
+}
+// Newsletter ends here ->
+
+// Footer starts here
+#footer {
+  @include overall-sizes-100();
+  height: 333px;
+  color: $fontColor1;
+  background-color: #2a2d34;
+}
+#footer {
+  height: auto;
+  .footer-container {
+    @include overall-sizes-80();
+  }
+  .footer-container {
+    .footer-our-stores {
+      h3 {
+        font-family: $fontStack;
+        color: $fontColor1;
+        font-size: $font-size-23;
+      }
+      a {
+        font-family: 'Arial', sans-serif;
+        font-size: $font-size-14;
+        color: $greyColor;
+        text-decoration: none;
+      }
+      .social-media-links {
+        a:first-of-type {
+          color: $primaryColor;
+        }
+        a {
+          font-size: $font-size-23;
+          padding: 0px 5px 0px 5px;
+          color: $fontColor1;
+          &:hover {
+            color: lighten($greyColor, 15%);
+          }
+        }
+        a:first-of-type {
+          &:hover {
+            color: darken($primaryColor, 20%);
+          }
+        }
+      }
+    }
+    .footer-our-stores {
+      color: $greyColor;
+    }
+    .footer-blog-posts {
+      h3 {
+        color: $fontColor1;
+        font-size: $font-size-23;
+      }
+      h5 {
+        font-family: 'Arial', sans-serif;
+        color: $fontColor1;
+        font-size: $font-size-14;
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+        -webkit-margin-start: 0;
+        -webkit-margin-end: 0;
+        font-weight: normal;
+      }
+      p {
+        font-family: 'Arial', sans-serif;
+        font-size: $font-size-14;
+      }
+    }
+    .footer-blog-posts {
+      color: $greyColor;
+    }
+    .footer-support {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+    }
+    .footer-support {
+      .footer-links {
+        a {
+          &:hover {
+          color: lighten($greyColor, 10%);
+          text-decoration: underline;
+          }
+        }
+      }
+      .footer-links2 {
+        a {
+          &:hover {
+          color: lighten($greyColor, 10%);
+          text-decoration: underline;
+          }
+        }
+      }
+      .footer-links2 {
+       margin: auto;
+      }
+      h3 {
+        font-family: $fontStack;
+        color: $fontColor1;
+        font-size: $font-size-23;
+      }
+      a {
+        font-family: 'Arial', sans-serif;
+        color: $greyColor;
+        text-decoration: none;
+      }
+      p {
+        font-family: 'Arial', sans-serif;
+        font-size: $font-size-14;
+      }
+    }
+  }
+}
+// Footer ends here ->
