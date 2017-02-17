@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Version1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" 
+      type="image/png" 
+      href="assets/img/shoe.png">
+    <link href="assets/styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/font-awesome-icons/css/font-awesome.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="assets/slider/bxslider/src/js/jquery.bxslider.js"></script>
+    <link rel="stylesheet" href="assets/slider/bxslider/src/css/jquery.bxslider.css">
+    <script>
+        $(document).ready(function(){
+            $('.bxslider').bxSlider();
+        });
+    </script>
+</head>
+<body>
+<!-- This is the header section //-->
+<section id="header">
+        <header>
+            <div class="logo-and-info">
+                <div class="logo"><a href="index.html">SUPERSPORTS</a></div>
+                <span class="">+4522660077</span>
+                <span class="">LOREM@IPSUM.COM</span>
+                <span class="cart"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> $99.54 CHECKOUT</span>
+            </div>
+            <div class="nav-bar">
+                <label for="show-menu" class="show-menu">Show Menu</label>
+                <input type="checkbox" id="show-menu" role="button">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="#">MEN</a>
+                            <ul class="dropdown">
+                                <li><a href="#">LOREM</a></li>
+                                <li><a href="#">DOREM SIA</a></li>
+                                <li><a href="#">ERIK</a></li>
+                                <li><a href="#">BEHANCE</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">WOMEN</a></li>
+                        <li><a href="#">KIDS</a></li>
+                        <li><a href="#">SALE</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                        <li><a href="#">SUPPORT</a></li>
+                        <div class="search"><i class="fa fa-search" aria-hidden="true"></i><input type="search" name="search" placeholder="Search..."></div>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>
+<!-- This is the homepage section //-->
+    <section id="homepage">
+        <div class="top-divider"></div>
+        <div class="slider">
+            <ul class="bxslider">
+                <li><img src="assets/img/imageSlider.jpg"></li>
+                <li><img src="assets/img/imageSlider2.jpg"></li>
+                <li><img src="assets/img/imageSlider3.jpg"></li>
+            </ul>
+            <div class="transparent-box">
+            </div>
+            <div class="transparent-box-content">
+                <h1>RIGHT IS PINK</h1>
+                <h1>LEFT IS BLUE</h1>
+                <p>
+                    Inspired by Brasil's bold colors and matching up to football's on-pitch playmakers, the kiks are ready to stand out.
+                </p>
+                <button class="shop-brasil-button" type="button">SHOP BRASIL</button>
+            </div>
+        </div>
+        <div class="section group">
+            <div class="categories">
+                <div class="col span_1_of_3">
+                    <div class="category-1">
+                        <img src="assets/img/footbal-shoe-category.jpg">
+                        <h2>FOOTBALL SHOES</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing,
+                            vivamus congue nulla leo, quis imperdiet magna</p>
+                    </div>
+                </div>
+                <div class="col span_1_of_3">
+                    <div class="category-2">
+                        <img src="assets/img/modern-clothes-category.jpg">
+                        <h2>MODERN CLOTHES</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing,
+                            vivamus congue nulla leo, quis imperdiet magna</p>
+                    </div>
+                </div>
+                <div class="col span_1_of_3">
+                    <div class="category-3">
+                        <img src="assets/img/bags-and-accessories-category.jpg">
+                        <h2>BAGS &amp; ACCESSORIES</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing,
+                            vivamus congue nulla leo, quis imperdiet magna</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="products">
+            <div class="popular-products-title"><h2>POPULAR PRODUCTS</h2></div>
+            <div class="section group">
+                <div class="col span_1_of_4">
+                    <div class="product">
+                        <div class="product-image-container">
+                            <div class="stars">
+                                <form action="">
+                                    <input class="star star-5" id="star-5" type="radio" name="star"/>
+                                    <label class="star star-5" for="star-5"></label>
+                                    <input class="star star-4" id="star-4" type="radio" name="star"/>
+                                    <label class="star star-4" for="star-4"></label>
+                                    <input class="star star-3" id="star-3" type="radio" name="star"/>
+                                    <label class="star star-3" for="star-3"></label>
+                                    <input class="star star-2" id="star-2" type="radio" name="star"/>
+                                    <label class="star star-2" for="star-2"></label>
+                                    <input class="star star-1" id="star-1" type="radio" name="star"/>
+                                    <label class="star star-1" for="star-1"></label>
+                                </form>
+                            </div>
+                            <img src="assets/img/shoe.png" alt="Shoe" class="product-image">
+                            <div class="product-image-middle">
+                                <div class="product-image-text"><a href="detail.html">Check detail page</a></div>
+                            </div>
+                        </div>
+                        <div class="product-text-aligned">
+                            <h4>GEL-FUJITRABUCO 5 G-TX</h4>
+                            <h6>RUNNING SHOE</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing,<br>
+                                vivamus congue nulla leo, quis imperdiet magna.....</p>
+                        </div>
+                        <hr class="horizontal-line">
+                        <div class="prices-icons">
+                            <div class="price">
+                                <span>$ 86.99</span>
+                            </div>
+                            <div class="like-add-icons">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <button class="buy-now-btn">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="col span_1_of_4">
+                    <div class="product">
+                        <div class="product-image-container">
+                            <div class="stars">
+                                <form action="">
+                                    <input class="star star-5" id="star-10" type="radio" name="star"/>
+                                    <label class="star star-5" for="star-10"></label>
+                                    <input class="star star-4" id="star-9" type="radio" name="star"/>
+                                    <label class="star star-4" for="star-9"></label>
+                                    <input class="star star-3" id="star-8" type="radio" name="star"/>
+                                    <label class="star star-3" for="star-8"></label>
+                                    <input class="star star-2" id="star-7" type="radio" name="star"/>
+                                    <label class="star star-2" for="star-7"></label>
+                                    <input class="star star-1" id="star-6" type="radio" name="star"/>
+                                    <label class="star star-1" for="star-6"></label>
+                                </form>
+                            </div>
+                            <img src="assets/img/shoe.png" alt="Shoe" class="product-image">
+                            <div class="product-image-middle">
+                                <div class="product-image-text"><a href="detail.html">Check detail page</a></div>
+                            </div>
+                        </div>
+                        <div class="product-text-aligned">
+                            <h4>GEL-FUJITRABUCO 5 G-TX</h4>
+                            <h6>RUNNING SHOE</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing,<br>
+                                vivamus congue nulla leo, quis imperdiet magna.....</p>
+                        </div>
+                        <hr class="horizontal-line">
+                        <div class="prices-icons">
+                            <div class="price">
+                                <span>$ 86.99</span>
+                            </div>
+                            <div class="like-add-icons">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <button class="buy-now-btn">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="col span_1_of_4">
+                    <div class="product">
+                        <div class="product-image-container">
+                            <div class="stars">
+                                <form action="">
+                                    <input class="star star-5" id="star-15" type="radio" name="star"/>
+                                    <label class="star star-5" for="star-15"></label>
+                                    <input class="star star-4" id="star-14" type="radio" name="star"/>
+                                    <label class="star star-4" for="star-14"></label>
+                                    <input class="star star-3" id="star-13" type="radio" name="star"/>
+                                    <label class="star star-3" for="star-13"></label>
+                                    <input class="star star-2" id="star-12" type="radio" name="star"/>
+                                    <label class="star star-2" for="star-12"></label>
+                                    <input class="star star-1" id="star-11" type="radio" name="star"/>
+                                    <label class="star star-1" for="star-11"></label>
+                                </form>
+                            </div>
+                            <img src="assets/img/shoe.png" alt="Shoe" class="product-image">
+                            <div class="product-image-middle">
+                                <div class="product-image-text"><a href="detail.html">Check detail page</a></div>
+                            </div>
+                        </div>
+                        <div class="product-text-aligned">
+                            <h4>GEL-FUJITRABUCO 5 G-TX</h4>
+                            <h6>RUNNING SHOE</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing,<br>
+                                vivamus congue nulla leo, quis imperdiet magna.....</p>
+                        </div>
+                        <hr class="horizontal-line">
+                        <div class="prices-icons">
+                            <div class="price">
+                                <span>$ 86.99</span>
+                            </div>
+                            <div class="like-add-icons">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <button class="buy-now-btn">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="col span_1_of_4">
+                    <div class="product">
+                        <div class="product-image-container">
+                            <div class="stars">
+                                <form action="">
+                                    <input class="star star-5" id="star-20" type="radio" name="star"/>
+                                    <label class="star star-5" for="star-20"></label>
+                                    <input class="star star-4" id="star-19" type="radio" name="star"/>
+                                    <label class="star star-4" for="star-19"></label>
+                                    <input class="star star-3" id="star-18" type="radio" name="star"/>
+                                    <label class="star star-3" for="star-18"></label>
+                                    <input class="star star-2" id="star-17" type="radio" name="star"/>
+                                    <label class="star star-2" for="star-17"></label>
+                                    <input class="star star-1" id="star-16" type="radio" name="star"/>
+                                    <label class="star star-1" for="star-16"></label>
+                                </form>
+                            </div>
+                            <img src="assets/img/shoe.png" alt="Shoe" class="product-image">
+                            <div class="product-image-middle">
+                                <div class="product-image-text"><a href="detail.html">Check detail page</a></div>
+                            </div>
+                        </div>
+                        <div class="product-text-aligned">
+                            <h4>GEL-FUJITRABUCO 5 G-TX</h4>
+                            <h6>RUNNING SHOE</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing,<br>
+                                vivamus congue nulla leo, quis imperdiet magna.....</p>
+                        </div>
+                        <hr class="horizontal-line">
+                        <div class="prices-icons">
+                            <div class="price">
+                                <span>$ 86.99</span>
+                            </div>
+                            <div class="like-add-icons">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <button class="buy-now-btn">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+            <div class="section group">
+                <div class="col span_1_of_4">
+                    <div class="product">
+                        <div class="product-image-container">
+                            <div class="stars">
+                                <form action="">
+                                    <input class="star star-5" id="star-25" type="radio" name="star"/>
+                                    <label class="star star-5" for="star-25"></label>
+                                    <input class="star star-4" id="star-24" type="radio" name="star"/>
+                                    <label class="star star-4" for="star-24"></label>
+                                    <input class="star star-3" id="star-23" type="radio" name="star"/>
+                                    <label class="star star-3" for="star-23"></label>
+                                    <input class="star star-2" id="star-22" type="radio" name="star"/>
+                                    <label class="star star-2" for="star-22"></label>
+                                    <input class="star star-1" id="star-21" type="radio" name="star"/>
+                                    <label class="star star-1" for="star-21"></label>
+                                </form>
+                            </div>
+                            <img src="assets/img/shoe.png" alt="Shoe" class="product-image">
+                            <div class="product-image-middle">
+                                <div class="product-image-text"><a href="detail.html">Check detail page</a></div>
+                            </div>
+                        </div>
+                        <div class="product-text-aligned">
+                            <h4>GEL-FUJITRABUCO 5 G-TX</h4>
+                            <h6>RUNNING SHOE</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing,<br>
+                                vivamus congue nulla leo, quis imperdiet magna.....</p>
+                        </div>
+                        <hr class="horizontal-line">
+                        <div class="prices-icons">
+                            <div class="price">
+                                <span>$ 86.99</span>
+                            </div>
+                            <div class="like-add-icons">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <button class="buy-now-btn">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="col span_1_of_4">
+                    <div class="product">
+                        <div class="product-image-container">
+                            <div class="stars">
+                                <form action="">
+                                    <input class="star star-5" id="star-30" type="radio" name="star"/>
+                                    <label class="star star-5" for="star-30"></label>
+                                    <input class="star star-4" id="star-29" type="radio" name="star"/>
+                                    <label class="star star-4" for="star-29"></label>
+                                    <input class="star star-3" id="star-28" type="radio" name="star"/>
+                                    <label class="star star-3" for="star-28"></label>
+                                    <input class="star star-2" id="star-27" type="radio" name="star"/>
+                                    <label class="star star-2" for="star-27"></label>
+                                    <input class="star star-1" id="star-26" type="radio" name="star"/>
+                                    <label class="star star-1" for="star-26"></label>
+                                </form>
+                            </div>
+                            <img src="assets/img/shoe.png" alt="Shoe" class="product-image">
+                            <div class="product-image-middle">
+                                <div class="product-image-text"><a href="detail.html">Check detail page</a></div>
+                            </div>
+                        </div>
+                        <div class="product-text-aligned">
+                            <h4>GEL-FUJITRABUCO 5 G-TX</h4>
+                            <h6>RUNNING SHOE</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing,<br>
+                                vivamus congue nulla leo, quis imperdiet magna.....</p>
+                        </div>
+                        <hr class="horizontal-line">
+                        <div class="prices-icons">
+                            <div class="price">
+                                <span>$ 86.99</span>
+                            </div>
+                            <div class="like-add-icons">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <button class="buy-now-btn">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="col span_1_of_4">
+                    <div class="product">
+                        <div class="product-image-container">
+                            <div class="stars">
+                                <form action="">
+                                    <input class="star star-5" id="star-35" type="radio" name="star"/>
+                                    <label class="star star-5" for="star-35"></label>
+                                    <input class="star star-4" id="star-34" type="radio" name="star"/>
+                                    <label class="star star-4" for="star-34"></label>
+                                    <input class="star star-3" id="star-33" type="radio" name="star"/>
+                                    <label class="star star-3" for="star-33"></label>
+                                    <input class="star star-2" id="star-32" type="radio" name="star"/>
+                                    <label class="star star-2" for="star-32"></label>
+                                    <input class="star star-1" id="star-31" type="radio" name="star"/>
+                                    <label class="star star-1" for="star-31"></label>
+                                </form>
+                            </div>
+                            <img src="assets/img/shoe.png" alt="Shoe" class="product-image">
+                            <div class="product-image-middle">
+                                <div class="product-image-text"><a href="detail.html">Check detail page</a></div>
+                            </div>
+                        </div>
+                        <div class="product-text-aligned">
+                            <h4>GEL-FUJITRABUCO 5 G-TX</h4>
+                            <h6>RUNNING SHOE</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing,<br>
+                                vivamus congue nulla leo, quis imperdiet magna.....</p>
+                        </div>
+                        <hr class="horizontal-line">
+                        <div class="prices-icons">
+                            <div class="price">
+                                <span>$ 86.99</span>
+                            </div>
+                            <div class="like-add-icons">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <button class="buy-now-btn">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="col span_1_of_4">
+                    <div class="product">
+                        <div class="product-image-container">
+                            <div class="stars">
+                                <form action="">
+                                    <input class="star star-5" id="star-40" type="radio" name="star"/>
+                                    <label class="star star-5" for="star-40"></label>
+                                    <input class="star star-4" id="star-39" type="radio" name="star"/>
+                                    <label class="star star-4" for="star-39"></label>
+                                    <input class="star star-3" id="star-38" type="radio" name="star"/>
+                                    <label class="star star-3" for="star-38"></label>
+                                    <input class="star star-2" id="star-37" type="radio" name="star"/>
+                                    <label class="star star-2" for="star-37"></label>
+                                    <input class="star star-1" id="star-36" type="radio" name="star"/>
+                                    <label class="star star-1" for="star-36"></label>
+                                </form>
+                            </div>
+                            <img src="assets/img/shoe.png" alt="Shoe" class="product-image">
+                            <div class="product-image-middle">
+                                <div class="product-image-text"><a href="detail.html">Check detail page</a></div>
+                            </div>
+                        </div>
+                        <div class="product-text-aligned">
+                            <h4>GEL-FUJITRABUCO 5 G-TX</h4>
+                            <h6>RUNNING SHOE</h6>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing,<br>
+                                vivamus congue nulla leo, quis imperdiet magna.....</p>
+                        </div>
+                        <hr class="horizontal-line">
+                        <div class="prices-icons">
+                            <div class="price">
+                                <span>$ 86.99</span>
+                            </div>
+                            <div class="like-add-icons">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <button class="buy-now-btn">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- This is the newsletter-singup section //-->
+    <section id="newsletter-singup">
+        <div class="newsletter-wrapper">
+                    <div class="newsletter">
+                        <h1>SING UP FOR EXCLUSIVE SALES AND PRODUCT NEWS</h1>
+                    </div>
+                    <div class="newsletter-register">
+                        <input type="text" name="email" placeholder="LOREM@IPSUM.com">
+                        <button class="sing-up-btn" type="button">SING UP</button>
+                    </div>
+        </div>
+    </section>
+<!-- This is the footer section //-->
+    <section id="footer">
+        <footer>
+            <div class="footer-container">
+                <div class="section group">
+                    <div class="col span_1_of_3">
+                        <div class="footer-our-stores">
+                            <h3>OUR STORES</h3>
+                            <p>
+                                Fell free to visit our stores or contact us.<br>
+                            </p>
+                            <a href="https://www.google.dk/maps/place/Vindegade+109,+5000+Odense+C/@55.395589,10.3762713,17z/data=!3m1!4b1!4m5!3m4!1s0x464cdffa7a3b067b:0x7e784f485676a9c7!8m2!3d55.395586!4d10.37846?hl=en" target="_blank">Vinnegade 109<br>
+                                5000 ODENSE<br>
+                                99886622<br></a><br>
+                            <div class="social-media-links">
+                                <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="https://www.google.com" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+                                <a href="https://www.vimeo.com" target="_blank"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
+                                <a href="https://www.rss.com" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col span_1_of_3">
+                        <div class="footer-blog-posts">
+                            <h3>BLOG POSTS</h3>
+                            <p>
+                            <h5>Lorem ipsum hey</h5>
+                            Lorem ipsum dolor sit amet, consectetur<br>
+                            adipiscing elit. Donec sed auctor elit.<br><br>
+
+                            <h5>New sexy sport clothes are here!</h5>
+                            Lorem ipsum dolor sit amet, consectetur<br>
+                            adipiscing elit. Donec sed auctor elit.<br><br>
+
+                            <h5>Summer sales are coming!</h5>
+                            Lorem ipsum dolor sit amet, consectetur<br>
+                            adipiscing elit. Donec sed auctor elit.<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col span_1_of_3">
+                        <div>
+                            <div class="footer-support">
+                                <div class="footer-links">
+                                    <h3>SUPPORT</h3>
+                                    <a href="#">Terms & Conditions</a><br>
+                                    <a href="#">FAQ</a><br>
+                                    <a href="#">Payment</a><br>
+                                    <a href="#">Refunds</a><br>
+                                    <a href="#">Track Order</a><br>
+                                    <a href="#">Services</a><br>
+                                    <a href="#">Privacy & Security</a><br>
+                                    <a href="#">Careers</a><br>
+                                    <a href="#">Press</a><br>
+                                    <a href="#">Corporate Information</a>
+                                </div>
+                                <div class="footer-links2"><br>
+                                    <a href="#">Sizing</a><br>
+                                    <a href="#">Ordering</a><br>
+                                    <a href="#">Shipping</a><br>
+                                    <a href="#">Return Policy</a><br>
+                                    <a href="#">Affiliates</a><br>
+                                    <a href="#">Find A Store</a><br>
+                                    <a href="#">Site Map</a>
+                                    <a href="#">Sign Up &amp; Save</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>
